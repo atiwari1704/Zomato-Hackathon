@@ -1,4 +1,4 @@
-readme = '''# Zomato CSAO Rail Recommendation System
+# Zomato CSAO Rail Recommendation System
 
 ## 🎯 Problem Statement
 Build an intelligent recommendation system for Zomato's Cart Super Add-On (CSAO) rail to suggest relevant items that increase AOV while maintaining high customer satisfaction.
