@@ -202,7 +202,7 @@ if cart_items:
             latency_ms = (time.time() - start_time) * 1000
             
             # Display
-            st.success(f"✅ Generated in {latency_ms:.0f}ms (Target: <300ms)")
+            st.success(f" Generated in {latency_ms:.0f}ms (Target: <300ms)")
             
             # Metrics
             col1, col2, col3 = st.columns(3)
@@ -224,7 +224,7 @@ if cart_items:
                     with cols[0]:
                         st.markdown(f"**#{idx}**")
                     with cols[1]:
-                        emoji = "🌟" if rec["completes_meal"] else "🍴"
+                        emoji = "" if rec["completes_meal"] else "🍴"
                         st.markdown(f"{emoji} **{rec['item']}**")
                     with cols[2]:
                         st.markdown(f"{rec['category']}")
@@ -236,17 +236,17 @@ if cart_items:
                         st.progress(rec["score"])
                     
                     if rec["completes_meal"]:
-                        st.caption("🎯 Completes meal based on rules")
+                        st.caption(" Completes meal based on rules")
                     
                     st.divider()
 else:
-    st.info("👆 Add items to your cart to get recommendations")
+    st.info(" Add items to your cart to get recommendations")
 
 # Footer
 st.markdown("---")
-st.markdown("**Zomathon CSAO Solution** | Built with ❤️ for IIT Kharagpur Assignment")
+st.markdown("**Zomathon CSAO Solution** | Built with for IIT Kharagpur Assignment")
 
 with open('app.py', 'w') as f:
     f.write(app_code)
 
-print("✅ Created app.py (Streamlit demo)")
+print(" Created app.py (Streamlit demo)")
