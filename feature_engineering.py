@@ -17,7 +17,7 @@ with open('items_database.json', 'r') as f:
 with open('meal_completion_rules.json', 'r') as f:
     meal_rules = json.load(f)
 
-print(f"\n✅ Loaded {len(df)} sessions")
+print(f"\n Loaded {len(df)} sessions")
 
 # ============================================
 # Feature Engineering Pipeline
@@ -213,7 +213,7 @@ for idx, row in df.iterrows():
 df_train = pd.DataFrame(training_data)
 df_train.to_csv('training_features.csv', index=False)
 
-print(f"\n✅ Feature engineering complete!")
+print(f"\n Feature engineering complete!")
 print(f"  - Total training examples: {len(df_train)}")
 print(f"  - Positive examples: {(df_train['label'] == 1).sum()}")
 print(f"  - Negative examples: {(df_train['label'] == 0).sum()}")
@@ -246,7 +246,7 @@ print("=" * 60)
 
 # Load training data
 df_train = pd.read_csv('training_features.csv')
-print(f"\n✅ Loaded {len(df_train)} training examples")
+print(f"\n Loaded {len(df_train)} training examples")
 
 # Prepare features and labels
 feature_cols = [col for col in df_train.columns if col not in ['label', 'session_id', 'candidate_item']]
@@ -300,7 +300,7 @@ precision_gb = precision_score(y_test, y_pred_gb)
 recall_gb = recall_score(y_test, y_pred_gb)
 f1_gb = 2 * (precision_gb * recall_gb) / (precision_gb + recall_gb)
 
-print(f"\n✅ Gradient Boosting Results:")
+print(f"\n Gradient Boosting Results:")
 print(f"  AUC: {auc_gb:.4f}")
 print(f"  Precision: {precision_gb:.4f}")
 print(f"  Recall: {recall_gb:.4f}")
@@ -385,7 +385,7 @@ for session_id in df_test['session_id'].unique():
         ndcg_k = dcg / idcg if idcg > 0 else 0
         ndcg_at_k_gb[k].append(ndcg_k)
 
-print("\n✅ Ranking Metrics (Gradient Boosting):")
+print("\n Ranking Metrics (Gradient Boosting):")
 for k in k_values:
     avg_prec_k = np.mean(precision_at_k_gb[k])
     avg_ndcg_k = np.mean(ndcg_at_k_gb[k])
