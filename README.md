@@ -26,7 +26,7 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
-## 📊 Solution Overview
+## Solution Overview
 
 ### Approach
 - **Problem Framing**: Sequential ranking problem with meal completion logic
@@ -46,7 +46,7 @@ streamlit run app.py
 3. **Cold Start Handling**: Rule-based fallbacks for new users
 4. **Dynamic Updates**: Recommendations change as items are added
 
-## 📁 Files
+## Files
 
 - `app.py` - Interactive Streamlit demo
 - `csao_recommender_model.pkl` - Trained model
