@@ -244,7 +244,6 @@ else:
 
 # Footer
 st.markdown("---")
-st.markdown("**Zomathon CSAO Solution** | Built with for IIT Kharagpur Assignment")
 
 with open('app.py', 'w') as f:
     f.write(app_code)
