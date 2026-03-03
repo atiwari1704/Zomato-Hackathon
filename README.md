@@ -1,13 +1,17 @@
 # Zomato CSAO Rail Recommendation System
 
-'''
+### 📦 Requirements
+
+Create a `requirements.txt` file with the following content:
+
+```txt
 streamlit==1.31.0
 pandas==2.1.4
 numpy==1.26.3
 scikit-learn==1.4.0
 joblib==1.3.2
 plotly==5.18.0
-'''
+```
 
 ## 🎯 Problem Statement
 Build an intelligent recommendation system for Zomato's Cart Super Add-On (CSAO) rail to suggest relevant items that increase AOV while maintaining high customer satisfaction.
